@@ -5,9 +5,10 @@
       <h2>Conversor a dolares</h2>
       <br>
       <p>Ingrese Monto $<input name="cantidad" v-model="cantidad" type="number"></p>
-      <p>Valor del dolar en $<input name="valorDado" v-model="valorDado" value="valorDado" type="number"> - Actualizacion <input type="checkbox" v-model="checked" @input="chequeado()"  ></p><p v-if="checked"> {{dateTime.fecha}}</p> 
+      <p>Valor del dolar en $<input name="valorDado" v-model="valorDado" value="valorDado" type="number"> - Actualizacion <input type="checkbox" v-model="checked" @input="chequeado()"></p> <p v-if="checked"> {{dateTime.fecha}}</p> 
       <p> Valor convertido USD {{ resultado }} </p>
-
+      <br>
+      <p>Respuestas: 1:c 2:b 3:c 4:a 5:b</p>
     </div>      
   </section>
 
@@ -58,7 +59,7 @@
         }
       },
       chequeado(){
-        if(this.checked){
+        if(this.checked == true){
             this.getDolarBlue()
             this.setDateTime()
         }
